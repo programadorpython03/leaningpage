@@ -1,0 +1,133 @@
+/* Estilos gerais */
+body {
+    font-family: 'Arial', sans-serif; 
+    margin: 0;
+    color: #333; 
+    background-color: #f9f9f9; /* Cor de fundo clara */
+    text-align: center; /* Alinha o texto do body ao centro */
+}
+
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    background-color: #f8f8f8; 
+    padding: 20px 0;
+    border-bottom: 1px solid #eee; 
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: font-size 0.2s ease; /* Adiciona uma transição suave */
+}
+
+nav a:hover {
+    font-size: 1.2em; /* Aumenta o tamanho da fonte em 20% */
+}
+
+h1 {
+    margin-top: 0;
+    text-align: center; /* Centralizar o título */
+}
+
+section {
+    padding: 40px 0;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333; /* Cor de título escura */
+}
+
+/* Seção Sobre */
+.foto-perfil {
+    width: 200px; /* Ajuste o tamanho conforme necessário */
+    height: auto;
+    border-radius: 50%; /* Para deixar a imagem circular */
+    display: block; /* Para centralizar a imagem */
+    margin: 0 auto 20px; /* Adiciona margem inferior */
+}
+
+.sobre p {
+    line-height: 1.6;
+    text-align: justify; /* Justificar o texto */
+}
+
+/* Seção Experiência */
+.empresa {
+    margin-bottom: 30px;
+    border-bottom: 1px solid #eee; /* Linha sutil para separar as empresas */
+    padding-bottom: 20px;
+}
+
+.cargo {
+    font-weight: bold;
+}
+
+.periodo {
+    font-style: italic;
+    color: #666; /* Cor mais clara para o período */
+}
+
+/* Seção Contato */
+.contato ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.contato li {
+    margin-bottom: 10px;
+}
+
+/* Rodapé */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.fa-linkedin {
+    color: white; /* Cor branca para o ícone */
+    font-size: 2em; /* Ajuste o tamanho conforme necessário */
+    margin-bottom: 10px; 
+  }
+
+  .fa-github {
+    color: white; /* Cor branca para o ícone */
+    font-size: 2em; /* Ajuste o tamanho conforme necessário */
+    margin-bottom: 10px; 
+  }
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 10px;
+    }
+
+    nav li {
+        display: block; /* Empilhar itens do menu */
+        margin: 10px 0;
+    }
+}
