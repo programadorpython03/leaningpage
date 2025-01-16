@@ -1,133 +1,185 @@
-/* Estilos gerais */
+/* Estilos Gerais */
 body {
-    font-family: 'Arial', sans-serif; 
+    font-family: 'Roboto', sans-serif;
     margin: 0;
-    color: #333; 
-    background-color: #f9f9f9; /* Cor de fundo clara */
-    text-align: center; /* Alinha o texto do body ao centro */
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
 }
-
 
 .container {
-    max-width: 960px;
+    max-width: 1100px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 20px;
 }
 
+/* Cabeçalho */
 header {
-    background-color: #f8f8f8; 
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+    color: #fff;
     padding: 20px 0;
-    border-bottom: 1px solid #eee; 
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+header .subtitle {
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-top: 5px;
 }
 
 nav ul {
     list-style: none;
-    margin: 0;
     padding: 0;
-    text-align: center;
+    margin: 20px 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
-nav li {
-    display: inline-block;
-    margin: 0 10px;
-}
-
-nav a {
+nav ul li a {
+    color: #fff;
     text-decoration: none;
-    color: #333;
+    font-size: 1.1rem;
     font-weight: bold;
-    transition: font-size 0.2s ease; /* Adiciona uma transição suave */
+    padding: 5px 10px;
+    transition: background 0.3s ease;
 }
 
-nav a:hover {
-    font-size: 1.2em; /* Aumenta o tamanho da fonte em 20% */
-}
-
-h1 {
-    margin-top: 0;
-    text-align: center; /* Centralizar o título */
-}
-
-section {
-    padding: 40px 0;
-}
-
-h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #333; /* Cor de título escura */
+nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
 }
 
 /* Seção Sobre */
-.foto-perfil {
-    width: 200px; /* Ajuste o tamanho conforme necessário */
-    height: auto;
-    border-radius: 50%; /* Para deixar a imagem circular */
-    display: block; /* Para centralizar a imagem */
-    margin: 0 auto 20px; /* Adiciona margem inferior */
+.sobre {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 60px 20px;
+    background: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-bottom: 20px;
 }
 
-.sobre p {
-    line-height: 1.6;
-    text-align: justify; /* Justificar o texto */
+.foto-perfil {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
 }
 
 /* Seção Experiência */
+.experiencia {
+    padding: 40px 20px;
+    background: #f9f9f9;
+    border-top: 2px solid #ddd;
+    border-bottom: 2px solid #ddd;
+}
+
 .empresa {
-    margin-bottom: 30px;
-    border-bottom: 1px solid #eee; /* Linha sutil para separar as empresas */
-    padding-bottom: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    background: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.empresa h3 {
+    margin: 0 0 10px;
+    color: #4facfe;
+    font-size: 1.5rem;
 }
 
 .cargo {
     font-weight: bold;
+    color: #555;
 }
 
 .periodo {
     font-style: italic;
-    color: #666; /* Cor mais clara para o período */
+    color: #999;
+    margin-bottom: 10px;
 }
 
 /* Seção Contato */
-.contato ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+.contato {
+    padding: 40px 20px;
+    background: linear-gradient(to right, #00f2fe, #4facfe);
+    color: #fff;
     text-align: center;
+    border-radius: 10px;
 }
 
-.contato li {
-    margin-bottom: 10px;
+.contact-details p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.contact-details a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.contact-details i {
+    margin-right: 10px;
 }
 
 /* Rodapé */
 footer {
-    background-color: #333;
+    padding: 20px 0;
+    background: #333;
     color: #fff;
-    padding: 10px 0;
     text-align: center;
+    font-size: 0.9rem;
+    margin-top: 20px;
 }
 
-.fa-linkedin {
-    color: white; /* Cor branca para o ícone */
-    font-size: 2em; /* Ajuste o tamanho conforme necessário */
-    margin-bottom: 10px; 
-  }
+.footer-links a {
+    margin: 0 10px;
+    color: #fff;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
 
-  .fa-github {
-    color: white; /* Cor branca para o ícone */
-    font-size: 2em; /* Ajuste o tamanho conforme necessário */
-    margin-bottom: 10px; 
-  }
+.footer-links a:hover {
+    color: #00f2fe;
+}
 
 /* Responsividade */
 @media (max-width: 768px) {
-    .container {
-        padding: 0 10px;
+    .sobre {
+        padding: 40px 10px;
     }
 
-    nav li {
-        display: block; /* Empilhar itens do menu */
-        margin: 10px 0;
+    .experiencia {
+        padding: 20px 10px;
+    }
+
+    .contato {
+        padding: 30px 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
     }
 }
