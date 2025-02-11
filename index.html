@@ -3,92 +3,156 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Frederico Gustavo Magalhães</title>
+    <title>Frederico Gustavo Magalhães | Desenvolvedor Full Stack</title>
+    <meta name="description" content="Portfólio profissional de Frederico Gustavo Magalhães, especialista em desenvolvimento Python e soluções de TI com 6+ anos de experiência.">
+    <meta name="keywords" content="Desenvolvedor Python, Especialista em TI, DevOps, Desenvolvimento Web, Soluções em Cloud">
+    <meta name="author" content="Frederico Gustavo Magalhães">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <nav>
-                <ul>
-                    <li><a href="#sobre">Sobre Mim</a></li>
-                    <li><a href="#experiencia">Experiência</a></li>
-                    <li><a href="#contato">Contato</a></li>
-                </ul>
-            </nav>
-            <h1>Frederico Gustavo Magalhães</h1>
-            <p class="subtitle">Desenvolvedor e Especialista em TI</p>
+
+    <!-- Botão Voltar ao Topo -->
+    <button id="backToTop" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <header class="header">
+        <nav class="nav container">
+            <a href="#" class="logo">FGM</a>
+            <div class="nav-links" id="nav-links">
+                <a href="#sobre">Sobre</a>
+                <a href="#experiencia">Experiência</a>
+                <a href="#contato">Contato</a>
+            </div>
+            <button class="hamburger" id="hamburger">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+        
+        <div class="hero container">
+            <h1 class="hero-title">Frederico Gustavo Magalhães</h1>
+            <p class="hero-subtitle">Desenvolvedor Full Stack & Especialista em TI</p>
+            <div class="scroll-indicator">
+                <div class="mouse"></div>
+            </div>
         </div>
     </header>
 
     <main>
-        <section id="sobre" class="sobre">
+        <section id="sobre" class="section sobre" data-anime="top">
             <div class="container">
-                <div class="about-wrapper">
-                    <img src="images/perfil.jpg" alt="Sua Foto" class="foto-perfil"> 
-                    <div class="about-content">
-                        <h2>Sobre Mim</h2>
-                        <p>Com seis anos de experiência na Star Comunicação e Serviços Ltda., tenho me destacado no suporte a usuários e na administração de redes e servidores, sempre com foco na eficiência e segurança dos sistemas.</p>
-                        <p>Minha paixão por tecnologia me impulsiona a buscar constantemente novas soluções e melhorias. Tenho sólida experiência em Python e no desenvolvimento de soluções web personalizadas, alinhadas às necessidades específicas de nossos clientes.</p>
+                <h2 class="section-title">Sobre Mim</h2>
+                <div class="about-grid">
+                    <div class="about-img">
+                        <img src="images/perfil.jpg" alt="Frederico Gustavo" class="profile-img" loading="lazy">
+                    </div>
+                    <div class="about-content" data-anime="left">
+                        <p class="about-text highlight">Com mais de 10 anos na ára de TI, tenho me destacado no suporte a usuários e na adminstração de redes e servidores, sempre com foco na eficiência e segurança dos usuários e dos sistemas. Ao longo da minha carreia, pude contrinuir de forma significativa para a otimização de processos e satisfação dos clientes, por meio de um compromisso contínuo com a excelência técnica e a inovação.</p>
+                        <p class="about-text">Atualmente, sou especialista em desenvolvimento Python e soluções de TI, com 6+ anos de experiência em liderança técnica em projetos de infraestrutura cloud, implementação de soluções DevOps e gestão de redes corporativas. Sou apaixonado por tecnologia e estou sempre em busca de novos desafios e oportunidades para aprimorar minhas habilidades e conhecimentos.</p>
+                        <p class="about-text highlight">Minha paixão por tecnologia me impulsiona a buscar constantemente novas soluções e melhorias. Tenho sólida experiencia em Python e, por meio de projeots de pesquisa, apoio no desenvolvimento de soluções web personalizadas, alinhadas às necessidades específicas dos clientes. A colaboração estreita com a equipe e a atenção meticulosa aos detalhes são pilares que têm sustentado meu sucesso na área de TI</p>
+                        <a href="https://linkedin.com/in/fredericogmagalhaes" class="btn" target="_blank">Saiba Mais</a>
+                        <div class="skills">
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">Redes</span>
+                            <span class="skill-tag">AWS</span>
+                            <span class="skill-tag">Docker</span>
+                            <span class="skill-tag">DevOps</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="experiencia" class="experiencia">
+        <section id="experiencia" class="section experiencia" data-anime="top">
             <div class="container">
-                <h2>Experiência</h2>
-                <div class="empresa">
-                    <h3>Star Comunicação e Serviços Ltda.</h3>
-                    <p class="cargo">Técnico em sistemas de informática</p>
-                    <p class="periodo">junho de 2018 - novembro de 2024 (6 anos e 6 meses)</p>
-                    <p>Prestação de suporte técnico a usuários e clientes, solucionando problemas e oferecendo orientação sobre o uso de sistemas e ferramentas.</p>
-                </div>
-                <div class="empresa">
-                    <h3>Vivver Sistemas</h3>
-                    <p class="cargo">Analista de Teste</p>
-                    <p class="periodo">dezembro de 2013 - setembro de 2017 (3 anos e 10 meses)</p>
-                    <p>Responsável por realizar a verificação e testes de qualidade do software desenvolvido pela empresa.</p>
-                </div>
-                <div class="empresa">
-                    <h3>Sua Conta Portaltrack</h3>
-                    <p class="cargo">Analista de Requisitos</p>
-                    <p class="periodo">abril de 2012 - setembro de 2016 (4 anos e 6 meses)</p>
-                    <p>Responsável por analisar, documentar e testar novas funcionalidades do sistema comercializado pela empresa.</p>
-                </div>
-                <div class="empresa">
-                    <h3>AeC Centro de Contratos S/A</h3>
-                    <p class="cargo">Operador de telemarketing ativo e receptivo</p>
-                    <p class="periodo">janeiro de 2018 - julho de 2018 (7 meses)</p>
-                    <p>Atendimento receptivo de clientes para a empresa Terra. Suporte ao CPanel e WordPress.</p>
+                <h2 class="section-title">Experiência Profissional</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-header">
+                            <h3>Star Comunicação e Serviços Ltda.</h3>
+                            <span class="timeline-date">junho de 2018 - novembro de 2024 (6 anos e 6 meses)</span>
+                        </div>
+                        <p class="timeline-position">Técnico em Sistemas de Informática</p>
+                        <p class="timeline-description">Liderança técnica em projetos de infraestrutura cloud, implementação de soluções DevOps e gestão de redes corporativas.</p>
+                    </div>
+                    
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-header">
+                                <h3>Vivver Sistemas Ltda.</h3>
+                                <span class="timeline-date">dezembro de 2013 - setembro de 2017 (3 anos e 10 meses)</span>
+                            </div>
+                            <p class="timeline-position">Analista de Teste</p>
+                            <p class="timeline-description">Responsável por realizar a verificação e testes de qualidade do software desenvolvido pela empresa.</p>
+                        </div>
+
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-header">
+                                <h3>Sua Conta Portaltrack Ltda.</h3>
+                                <span class="timeline-date">abril de 2012 - setembro de 2016 (4 anos e 6 meses)</span>
+                            </div>
+                            <p class="timeline-position">Analista de Requisitos</p>
+                            <p class="timeline-description">Responsável por analisar, documentar e testar novas funcionalidades do sistema comercializado pela empresa.</p>
+                        </div>
+
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-header">
+                                <h3>AeC Centro de Contratos S/A.</h3>
+                                <span class="timeline-date">janeiro de 2018 - julho de 2018 (7 meses)</span>
+                            </div>
+                            <p class="timeline-position">Operador de telemarketing ativo e receptivo</p>
+                            <p class="timeline-description">Atendimento receptivo de clientes para a empresa Terra. Suporte ao CPanel e WordPress.</p>
+                        </div>
+                        
+                        <!-- Outros itens da timeline seguem o mesmo padrão -->
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="contato" class="contato">
+        <section id="contato" class="section contato"  data-anime="top">
             <div class="container">
-                <h2>Contato</h2>
-                <div class="contact-details">
-                    <p><i class="fas fa-phone-alt"></i> <strong>Telefone:</strong> (31) 98980-5397</p>
-                    <p><i class="fas fa-envelope"></i> <strong>Email:</strong> fredericog2009@gmail.com</p>
+                <h2 class="section-title">Vamos Conversar</h2>
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-phone-alt contact-icon"></i>
+                            <div>
+                                <h3>Telefone</h3>
+                                <p>(31) 98980-5397</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope contact-icon"></i>
+                            <div>
+                                <h3>Email</h3>
+                                <p>fredericog2009@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://linkedin.com/in/fredericogmagalhaes" class="social-link" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/programadorpython03" class="social-link" target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer>
+    <footer class="footer">
         <div class="container">
-            <div class="footer-links">
-                <a href="https://www.linkedin.com/in/fredericogmagalhaes/" target="_blank">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="https://github.com/programadorpython03?tab=repositories" target="_blank">
-                    <i class="fab fa-github"></i>
-                </a>
-            </div>
-            <p>&copy; 2024 Frederico Gustavo Magalhães</p> 
+            <p class="footer-text">© 2024 Frederico Gustavo Magalhães. Todos os direitos reservados.</p>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

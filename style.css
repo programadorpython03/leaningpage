@@ -1,185 +1,329 @@
-/* Estilos Gerais */
-body {
-    font-family: 'Roboto', sans-serif;
+/* Variáveis CSS */
+:root {
+    --primary-color: #2A2E45;
+    --secondary-color: #5C6B73;
+    --accent-color: #4F86C6;
+    --light-bg: #F4F7F5;
+    --text-color: #333;
+    --transition: all 0.3s ease;
+}
+
+/* Reset e Estilos Base */
+* {
     margin: 0;
     padding: 0;
-    background-color: #f4f4f9;
-    color: #333;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-color);
     line-height: 1.6;
+    background-color: var(--light-bg);
 }
 
 .container {
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 0 1.5rem;
 }
 
-/* Cabeçalho */
-header {
-    background: linear-gradient(to right, #4facfe, #00f2fe);
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+/* Header */
+.header {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 1rem 0;
+    position: relative;
+    overflow: hidden;
 }
 
-header h1 {
-    font-size: 2.5rem;
-    margin: 0;
-}
-
-header .subtitle {
-    font-size: 1.2rem;
-    font-weight: 300;
-    margin-top: 5px;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 20px 0 0;
+.nav {
     display: flex;
-    justify-content: center;
-    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
 }
 
-nav ul li a {
-    color: #fff;
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: white;
     text-decoration: none;
-    font-size: 1.1rem;
-    font-weight: bold;
-    padding: 5px 10px;
-    transition: background 0.3s ease;
 }
 
-nav ul li a:hover {
-    background: rgba(255, 255, 255, 0.3);
-    border-radius: 5px;
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+}
+
+.nav-links a:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.hero {
+    text-align: center;
+    padding: 8rem 0;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    font-weight: 300;
+    opacity: 0.9;
+}
+
+.about-content p {
+    padding: 1.20rem 0;
+    align-items: justify;
 }
 
 /* Seção Sobre */
-.sobre {
-    display: flex;
-    flex-direction: column;
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 4rem;
     align-items: center;
-    text-align: center;
-    padding: 60px 20px;
-    background: #fff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    margin-bottom: 20px;
 }
 
-.foto-perfil {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
+.profile-img {
+    width: 100%;
+    border-radius: 1rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); 
+    padding: 1.5rem;
 }
 
-.about-content {
-    max-width: 800px;
-    margin: 0 auto;
-    line-height: 1.8;
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-top: 2rem;
 }
 
-/* Seção Experiência */
-.experiencia {
-    padding: 40px 20px;
-    background: #f9f9f9;
-    border-top: 2px solid #ddd;
-    border-bottom: 2px solid #ddd;
+.skill-tag {
+    background: var(--accent-color);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
 }
 
-.empresa {
-    margin-bottom: 20px;
-    padding: 20px;
-    border-radius: 5px;
-    background: #fff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+/* Timeline Experiência */
+.timeline {
+    position: relative;
+    padding: 3rem 0;
 }
 
-.empresa h3 {
-    margin: 0 0 10px;
-    color: #4facfe;
-    font-size: 1.5rem;
+.timeline-item {
+    background: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
+    transition: var(--transition);
 }
 
-.cargo {
-    font-weight: bold;
-    color: #555;
+.timeline-item:hover {
+    transform: translateY(-5px);
 }
 
-.periodo {
-    font-style: italic;
-    color: #999;
-    margin-bottom: 10px;
+.timeline-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.timeline-date {
+    color: var(--secondary-color);
+    font-weight: 500;
 }
 
 /* Seção Contato */
-.contato {
-    padding: 40px 20px;
-    background: linear-gradient(to right, #00f2fe, #4facfe);
-    color: #fff;
-    text-align: center;
-    border-radius: 10px;
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    background: white;
+    padding: 3rem;
+    border-radius: 1rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
 
-.contact-details p {
-    font-size: 1.2rem;
-    margin: 10px 0;
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
 }
 
-.contact-details a {
-    color: #fff;
-    text-decoration: underline;
-}
-
-.contact-details i {
-    margin-right: 10px;
-}
-
-/* Rodapé */
-footer {
-    padding: 20px 0;
-    background: #333;
-    color: #fff;
-    text-align: center;
-    font-size: 0.9rem;
-    margin-top: 20px;
-}
-
-.footer-links a {
-    margin: 0 10px;
-    color: #fff;
+.contact-icon {
     font-size: 1.5rem;
-    transition: color 0.3s ease;
+    color: var(--accent-color);
 }
 
-.footer-links a:hover {
-    color: #00f2fe;
+.social-links {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.social-link {
+    font-size: 2rem;
+    color: var(--primary-color);
+    transition: var(--transition);
+}
+
+.social-link:hover {
+    color: var(--accent-color);
 }
 
 /* Responsividade */
 @media (max-width: 768px) {
-    .sobre {
-        padding: 40px 10px;
+    .nav-links {
+        display: none;
     }
 
-    .experiencia {
-        padding: 20px 10px;
+    .about-grid {
+        grid-template-columns: 1fr;
     }
 
-    .contato {
-        padding: 30px 10px;
+    .hero-title {
+        font-size: 2.5rem;
     }
 
-    nav ul {
-        flex-direction: column;
-        gap: 10px;
+    .contact-grid {
+        grid-template-columns: 1fr;
+        padding: 2rem;
+    }
+}
+
+@media (min-width: 769px) {
+    .hamburger {
+        display: none;
+    }
+}
+
+/* Footer */
+.footer {
+    background: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.footer p {
+    margin-bottom: 1rem;
+}
+
+/* Botão Voltar ao Topo */
+.back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background: var(--accent-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top:hover {
+    transform: translateY(-5px);
+    background: var(--primary-color);
+}
+
+/* Animações de Scroll */
+[data-anime] {
+    opacity: 0;
+    transition: .8s;
+}
+
+[data-anime="left"] {
+    transform: translate3d(-50px, 0, 0);
+}
+
+[data-anime="right"] {
+    transform: translate3d(50px, 0, 0);
+}
+
+[data-anime="top"] {
+    transform: translate3d(0, -50px, 0);
+}
+
+[data-anime].animate {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}
+
+/* Lazy Loading */
+.lazy {
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out;
+}
+
+.lazy.loaded {
+    opacity: 1;
+}
+
+/* Animação de Fade */
+.fade {
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out;
+}
+
+/* Menu Hamburguer Ativo */
+.nav-links.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--primary-color);
+    padding: 1rem;
+    gap: 0.5rem;
+}
+
+.hamburger.active .fa-bars::before {
+    content: "\f00d";
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    
+    .hamburger {
+        display: block;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 1.5rem;
+        cursor: pointer;
     }
 }
