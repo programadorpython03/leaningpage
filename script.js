@@ -75,3 +75,12 @@ const lazyLoad = () => {
 document.addEventListener('DOMContentLoaded', () => {
     lazyLoad();
 });
+
+// Obter o ano atual e atualizar o footer
+document.addEventListener('DOMContentLoaded', () => {
+  const yearElement = document.getElementById('currentYear');
+  if (yearElement) {
+      const currentYear = new Date().getFullYear();
+      yearElement.textContent = currentYear;
+  }
+});
